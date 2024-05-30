@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./globalStyle.css" />
+        <link rel="stylesheet" href="./styles.css" />
+        <title>YeaPlanner</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header">
+            <div id="header-menu" class="header-block">
+                <img src="./img/Logo.svg" id="logo" class="logo-img" />
+            </div>
+        </header>
+        <!-- Main content -->
+        <main id="main" class="main">
+            <div id="main-input" class="input-block">
+                <input
+                    type="text"
+                    placeholder="Your next todo..."
+                    class="input-create-todo"
+                />
+                <button id="button-create-todo" class="button-for-create">
+                    create
+                </button>
+            </div>
+            <div id="todo-details" class="todo-details">
+                <p class="number-of-things">The number of things</p>
+                <p class="number-of-executed">The number of executed</p>
+            </div>
+            <div id="todo-list">
+                <div>
+                    <img
+                        src="./img/Clipboard.svg"
+                        alt="Clipboard"
+                        class="clipboard"
+                    />
+                </div>
+                <div>
+                    <p class="no-things-text">
+                        There are no things at the moment
+                    </p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

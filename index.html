@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./globalStyle.css" />
-        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="./styles/globalStyle.css" />
+        <link rel="stylesheet" href="./styles/styles.css" />
+        <script defer type="module" src="./scripts/main.js"></script>
         <title>YeaPlanner</title>
     </head>
     <body>
@@ -16,6 +17,7 @@
         </header>
         <!-- Main content -->
         <main id="main" class="main">
+            <!-- Input for create todo with button -->
             <div id="main-input" class="input-block">
                 <input
                     type="text"
@@ -26,24 +28,14 @@
                     create
                 </button>
             </div>
+            <!-- Block with details of executed things -->
             <div id="todo-details" class="todo-details">
                 <p class="number-of-things">The number of things</p>
                 <p class="number-of-executed">The number of executed</p>
             </div>
-            <div id="todo-list">
-                <div>
-                    <img
-                        src="./img/Clipboard.svg"
-                        alt="Clipboard"
-                        class="clipboard"
-                    />
-                </div>
-                <div>
-                    <p class="no-things-text">
-                        There are no things at the moment
-                    </p>
-                </div>
-            </div>
+            <div id="todo-without-or-with-things" class="todo-block"></div>
+            <!-- Block without things -->
+            <!-- Block with todo -->
         </main>
     </body>
 </html>

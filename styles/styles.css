@@ -45,7 +45,6 @@
     background-color: #1e6f9f;
     border-radius: 8px;
     border: none;
-    flex-shrink: 0;
     box-sizing: border-box;
     font-size: 22px;
 }
@@ -75,7 +74,6 @@
     width: 100%;
     max-width: 740px;
     padding: 0 15px;
-    box-sizing: border-box;
     margin-top: 30px;
     padding: 10px;
     border-radius: 8px;
@@ -86,4 +84,62 @@
 
 .no-things-text {
     color: #808080;
+}
+
+.element-of-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 740px;
+    margin-top: 30px;
+    padding: 30px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: #262626;
+    border-radius: 8px;
+    border: 1px solid #333333;
+}
+
+/* Стили для скрытия стандартного чекбокса */
+.round-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Стили для круглого чекбокса */
+.round-checkbox-label {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #262626;
+    border: 2px solid #4ea8de;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Стили для галочки */
+.round-checkbox-label::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Показываем галочку, когда чекбокс отмечен */
+.round-checkbox:checked + .round-checkbox-label::after {
+    opacity: 1;
+}
+
+.todo-block {
+    max-width: 740px;
+    width: 100%;
 }

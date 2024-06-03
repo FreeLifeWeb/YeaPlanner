@@ -37,6 +37,7 @@
     border: none;
     box-sizing: border-box;
     font-size: 22px;
+    color: white;
 }
 
 .button-for-create {
@@ -142,4 +143,8 @@
 .todo-block {
     max-width: 740px;
     width: 100%;
+}
+
+.task {
+    color: #f2f2f2;
 }

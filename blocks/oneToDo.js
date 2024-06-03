@@ -1,19 +1,16 @@
-export const oneToDo = ` <div class="element-of-list">
-<div class="checkbox-container">
-    <input
-        type="checkbox"
-        id="round-checkbox"
-        class="round-checkbox"
-    />
-    <label
-        for="round-checkbox"
-        class="round-checkbox-label"
-    ></label>
-</div>
-<div>
-    <p class="task">My first task</p>
-</div>
-<div>
-    <img src="./img/trash.svg" alt="trash" />
-</div>
-</div>`;
+export function oneToDo(todo) {
+    return `
+        <div class="element-of-list" id="${todo.id}">
+            <div class="checkbox-container">
+                <input type="checkbox" id="round-checkbox-${todo.id}" class="round-checkbox" />
+                <label for="round-checkbox-${todo.id}" class="round-checkbox-label"></label>
+            </div>
+            <div>
+                <p id="task-${todo.id}" class="task">${todo.name}</p>
+            </div>
+            <div>
+                <img id="trash-button-${todo.id}" class="trash-button" src="./img/trash.svg" alt="trash" />
+            </div>
+        </div>
+    `;
+}

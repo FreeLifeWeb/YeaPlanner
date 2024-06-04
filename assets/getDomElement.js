@@ -9,7 +9,6 @@ export function getDomElement() {
     const buttonCreate = document.getElementById('button-create-todo');
     // параграф с новым добавленным заданием
     const task = document.getElementById('task');
-    // кнопка удаления дела
     return {
         blockWithToDo,
         inputForPushedToDo,

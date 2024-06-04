@@ -148,3 +148,12 @@
 .task {
     color: #f2f2f2;
 }
+
+.trash-button {
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #808080;
+}

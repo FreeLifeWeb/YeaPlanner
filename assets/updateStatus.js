@@ -1,11 +1,10 @@
 import { DBToDo } from './DB.js';
 import { saveinStore } from './setInLocalStore.js';
 
-export function deleteToDo(id) {
-    const index = DBToDo.findIndex((item) => item.id == id);
+export function updateStatus(id) {
+    const index = DBToDo.findIndex((el) => el.id === id);
     if (index !== -1) {
-        DBToDo.splice(index, 1);
+        DBToDo[index].status = !DBToDo[index].status;
         saveinStore(DBToDo);
     }
-    return DBToDo;
 }
